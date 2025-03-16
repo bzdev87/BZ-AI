@@ -1,0 +1,1 @@
+const API_KEY = "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";
