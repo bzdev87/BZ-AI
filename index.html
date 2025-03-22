@@ -23,15 +23,26 @@
             background: linear-gradient(135deg, #3498db, #1abc9c);
             color: white;
             text-align: center;
-            padding: 80px 20px;
+            padding: 100px 20px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            background-image: url('https://images.unsplash.com/photo-1519658368887-7d7b627d5d59?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg0OXwwfDF8c2VhY2h8Mnx8Y29tcGxleHRyYWl8ZW58MHx8fHwxNjc1MzY2MjEz&ixlib=rb-1.2.1&q=80&w=1080');
+            background-size: cover;
+            background-position: center;
+            background-blur: 10px;
         }
         header h1 {
-            font-size: 3em;
+            font-size: 3.5em;
             letter-spacing: 3px;
             font-weight: bold;
             text-transform: uppercase;
             margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+        header p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            color: #ecf0f1;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
 
         /* Main Content */
@@ -41,9 +52,13 @@
         section {
             margin-bottom: 40px;
             text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
         }
         h2 {
-            font-size: 2em;
+            font-size: 2.5em;
             color: #34495e;
             margin-bottom: 20px;
             font-weight: 700;
@@ -110,6 +125,10 @@
             header h1 {
                 font-size: 2.5em;
             }
+            section {
+                margin: 20px;
+                padding: 15px;
+            }
             button {
                 width: 100%;
                 font-size: 20px;
@@ -138,7 +157,7 @@
             <button onclick="showContactInfo()">Show Contact Info</button>
             <div id="contactInfo" style="display: none;">
                 <p>Email: jawirjago0@gmail.com</p>
-                <p>Phone: +62878-2594-6251</p>
+                <p>Phone: +62 878-2594-6251</p>
             </div>
             <div id="battery-status"></div>
             <div id="time-status"></div>
