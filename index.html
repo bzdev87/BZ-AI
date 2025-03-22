@@ -59,6 +59,11 @@
             color: #e67e22;
             margin-top: 20px;
         }
+        #time-status {
+            font-size: 1.1em;
+            color: #9b59b6;
+            margin-top: 20px;
+        }
 
         /* Button Styling */
         button {
@@ -136,6 +141,7 @@
                 <p>Phone: +123 456 7890</p>
             </div>
             <div id="battery-status"></div>
+            <div id="time-status"></div>
         </section>
 
         <!-- Biografi Section -->
@@ -167,6 +173,23 @@
             battery.addEventListener('levelchange', updateBattery);
             updateBattery();
         });
+
+        // Show Current Date and Time
+        function updateTime() {
+            const now = new Date();
+            const day = now.getDate();
+            const month = now.getMonth() + 1; // Month is zero-based
+            const year = now.getFullYear();
+            const hours = now.getHours();
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            const timeString = `🕒 ${hours}:${minutes}:${seconds} | ${day}/${month}/${year}`;
+            document.getElementById('time-status').innerText = timeString;
+        }
+
+        // Update time every second
+        setInterval(updateTime, 1000);
+        updateTime();
 
         // Toggle Contact Info Visibility
         function showContactInfo() {
