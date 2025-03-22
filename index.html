@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Theme v3</title>
+    <title>Akbar's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         /* Global Styles */
         body {
-            font-family: 'Roboto', Arial, sans-serif;
+            font-family: 'Open Sans', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f7f7f7;
+            background-color: #f4f6f9;
             color: #333;
         }
+
         h1, h2, p {
             margin: 0;
             padding: 0;
@@ -20,103 +22,125 @@
 
         /* Header Section */
         header {
-            background: linear-gradient(135deg, #3498db, #1abc9c);
+            background: url('https://media.istockphoto.com/id/2158002109/id/foto/happy-young-asian-businessman-shaking-hand-congratulating-success-of-the-other-business.jpg?s=612x612&w=0&k=20&c=MArL8uuA4pOkYwW1lQ12X8HuODPoGR-oT-oTMPuVlyk=') no-repeat center center/cover;
             color: white;
             text-align: center;
-            padding: 100px 20px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            background-image: url('https://media.istockphoto.com/id/2158002109/id/foto/happy-young-asian-businessman-shaking-hand-congratulating-success-of-the-other-business.jpg?s=612x612&w=0&k=20&c=MArL8uuA4pOkYwW1lQ12X8HuODPoGR-oT-oTMPuVlyk=');
-            background-size: cover;
-            background-position: center;
+            padding: 80px 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            position: relative;
         }
+
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        }
+
         header h1 {
-            font-size: 3.5em;
+            font-size: 4em;
             letter-spacing: 3px;
-            font-weight: bold;
-            text-transform: uppercase;
+            font-weight: 700;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            text-transform: uppercase;
+            text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
         }
+
         header p {
             font-size: 1.5em;
             margin-bottom: 30px;
             color: #ecf0f1;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
         }
 
         /* Main Content */
         main {
-            padding: 40px 20px;
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: auto;
         }
+
         section {
-            margin-bottom: 40px;
-            text-align: center;
-            padding: 20px;
-            border-radius: 10px;
-            background-color: #ffffff;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            transition: all 0.3s ease;
         }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
         h2 {
             font-size: 2.5em;
             color: #34495e;
-            margin-bottom: 20px;
-            font-weight: 700;
+            margin-bottom: 15px;
+            font-weight: 600;
         }
+
         p {
             font-size: 1.2em;
             color: #7f8c8d;
             line-height: 1.6;
             margin-bottom: 30px;
         }
-        #battery-status {
-            font-size: 1.2em;
-            color: #e67e22;
-            margin-top: 20px;
-        }
-        #time-status {
-            font-size: 1.1em;
-            color: #9b59b6;
-            margin-top: 20px;
-        }
 
-        /* Button Styling */
+        /* Buttons */
         button {
             padding: 15px 30px;
-            font-size: 18px;
+            font-size: 1.1em;
             background-color: #1abc9c;
             color: white;
             border: none;
-            border-radius: 25px;
+            border-radius: 30px;
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
         }
+
         button:hover {
             background-color: #16a085;
-            transform: translateY(-5px);
-            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
         }
 
-        /* Footer Styling */
+        /* Footer Section */
         footer {
             background-color: #2c3e50;
             color: white;
             text-align: center;
-            padding: 20px 10px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            padding: 30px 20px;
+            font-size: 1.1em;
         }
 
         footer a {
             color: #e67e22;
             text-decoration: none;
             margin: 0 10px;
-            font-size: 1.2em;
         }
 
         footer a:hover {
             text-decoration: underline;
+        }
+
+        /* Status Section */
+        #battery-status {
+            font-size: 1.1em;
+            color: #e67e22;
+            margin-top: 20px;
+        }
+
+        #time-status {
+            font-size: 1.1em;
+            color: #9b59b6;
+            margin-top: 20px;
         }
 
         /* Responsive Design */
@@ -124,13 +148,12 @@
             header h1 {
                 font-size: 2.5em;
             }
-            section {
-                margin: 20px;
-                padding: 15px;
+            header p {
+                font-size: 1.2em;
             }
             button {
                 width: 100%;
-                font-size: 20px;
+                font-size: 1.2em;
             }
         }
 
@@ -140,38 +163,39 @@
 
     <!-- Header -->
     <header>
-        <h1>Welcome to Our Business</h1>
-        <p>Innovating Your Future</p>
+        <h1>Akbar's Portfolio</h1>
+        <p>Innovating Your Ideas</p>
     </header>
 
     <!-- Main Content -->
     <main>
         <section>
-            <h2>About Us</h2>
-            <p>We provide high-quality business solutions tailored to help your company succeed in a competitive marketplace. We work closely with our clients to achieve their goals through effective strategies and cutting-edge technologies.</p>
+            <h2>About Me</h2>
+            <p>Hello! I'm Akbar, a developer and storyteller passionate about creating immersive digital experiences. I specialize in combining technology with creativity to bring ideas to life through games, websites, and digital stories. I work closely with clients to understand their vision and turn it into a reality.</p>
         </section>
 
         <section>
-            <h2>Contact Us</h2>
+            <h2>Projects</h2>
+            <p>Check out my latest projects where I explore new technologies and bring innovative solutions to life. I have experience in building multiplayer games, interactive websites, and mobile apps that engage users and solve real-world problems.</p>
+        </section>
+
+        <section>
+            <h2>Contact Me</h2>
             <button onclick="showContactInfo()">Show Contact Info</button>
             <div id="contactInfo" style="display: none;">
                 <p>Email: jawirjago0@gmail.com</p>
                 <p>Phone: +62 878-2594-6251</p>
             </div>
+
             <div id="battery-status"></div>
             <div id="time-status"></div>
         </section>
 
-        <!-- Biografi Section -->
-        <section>
-            <h2>About the Author</h2>
-            <p>Hi! I am Akbar & AI BZ-one©, a passionate developer and storyteller. I create immersive experiences in games and digital stories, combining creativity with technology to bring ideas to life.</p>
-        </section>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Business Inc. | All rights reserved.</p>
+        <p>&copy; 2025 Akbar's Portfolio. All Rights Reserved.</p>
         <div>
             <a href="https://www.instagram.com/dash1.id" target="_blank">Instagram</a>
             <a href="https://www.instagram.com/mletre_g4nk" target="_blank">Instagram</a>
